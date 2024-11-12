@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 45b67075882db5d47b9c70a083643768
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 36300000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290138
+  packageName: Stylized Nature Kit Pro
+  packageVersion: 1.1
+  assetPath: Assets/Proxy Games/Stylized Nature Kit Lite/Scenes/Main Demo Scene/OcclusionCullingData.asset
+  uploadId: 677154
