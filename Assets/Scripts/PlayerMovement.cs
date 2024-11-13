@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     [Header("Movement")]
-
     public float jumpForce;
     public float airMultiplier;
     public float jumpCoolDown;
@@ -21,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     bool grounded;
 
-
     public float speed;
 
     public Transform orientation;
@@ -33,26 +30,25 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-        
     }
 
-    private void MyInput(){
+    private void MyInput()
+    {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKeyDown(jumpKey) && grounded && canJump){
+        if (Input.GetKeyDown(jumpKey) && grounded && canJump)
+        {
             canJump = false;
             Jump();
             Invoke(nameof(ResetJump), jumpCoolDown);
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         // using raycasts to detect if the player is grounded
@@ -61,46 +57,57 @@ public class PlayerMovement : MonoBehaviour
         MyInput();
         SpeedControl();
 
-        if (grounded){
-            rb.linearDamping = groundDrag;
-        } else {
-            rb.linearDamping = 0;
+        // Adjust drag based on whether player is grounded
+        if (grounded)
+        {
+            rb.drag = groundDrag;
+        }
+        else
+        {
+            rb.drag = 0;
         }
     }
 
-    private void FixedUpdate(){
+    private void FixedUpdate()
+    {
         MovePlayer();
     }
 
-    private void MovePlayer(){
+    private void MovePlayer()
+    {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        
-        if (grounded){
+
+        if (grounded)
+        {
             rb.AddForce(moveDirection.normalized * speed * 10f, ForceMode.Force);
-        } else if (!grounded){ 
+        }
+        else if (!grounded)
+        {
             rb.AddForce(moveDirection.normalized * speed * airMultiplier * 10f, ForceMode.Force);
         }
     }
 
-    private void SpeedControl(){
-        Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+    private void SpeedControl()
+    {
+        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         // limit velocity
-        if (flatVel.magnitude > speed){
+        if (flatVel.magnitude > speed)
+        {
             Vector3 limitedVel = flatVel.normalized * speed;
-            rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
+            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }
     }
 
-    private void Jump(){
-
-        // reset y velo
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+    private void Jump()
+    {
+        // reset y velocity
+        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
-    private void ResetJump(){
+    private void ResetJump()
+    {
         canJump = true;
     }
-    
 }
