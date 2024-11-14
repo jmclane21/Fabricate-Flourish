@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour
+public class InventoryItem : MonoBehaviour
 {
-    public Item item;
+    [HideInInspector]public Item item;
 
     public Image image;
 
