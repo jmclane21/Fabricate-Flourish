@@ -7,8 +7,9 @@ public class Item : ScriptableObject
 {
     public Sprite image;
     public ItemType type;
+    public GameObject prefabObject;
     public Vector3Int placeRange = new Vector3Int(3, 3, 3);
-    public bool stackable = true;
+    public int stackCount = 1;
 }
 
 public enum ItemType

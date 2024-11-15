@@ -5,14 +5,16 @@ using UnityEngine;
 // ObjectManager class to handle object spawning and manipulation
 public class ObjectManager : MonoBehaviour
 {
-    public GameObject rockPrefab;      // The rock prefab to spawn
+    public Item itemToPlace;
+    //public GameObject rockPrefab;      // The rock prefab to spawn
     public Camera mainCamera;          // Reference to the main camera
     private List<GameObject> spawnedRocks = new List<GameObject>();  // List to keep track of spawned rocks
 
     // Method to spawn objects
     public void SpawnObject(Vector3 spawnPosition)
     {
-        GameObject spawnedRock = Instantiate(rockPrefab, spawnPosition, Quaternion.identity);
+        itemToPlace = InventoryManager.Instance.getSelectedItem(true);
+        GameObject spawnedRock = Instantiate(itemToPlace.prefabObject, spawnPosition, Quaternion.identity);
         spawnedRocks.Add(spawnedRock);
     }
 
@@ -21,14 +23,23 @@ public class ObjectManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 mousePosition = Input.mousePosition;
-            Ray ray = mainCamera.ScreenPointToRay(mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
+            if (InventoryManager.Instance.selectedSlot >= 0)
             {
-                // Spawn object at hit point
-                SpawnObject(hit.point);
+                itemToPlace = InventoryManager.Instance.getSelectedItem(false);
+                Vector3 mousePosition = Input.mousePosition;
+                Ray ray = mainCamera.ScreenPointToRay(mousePosition);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit))
+                {
+                    // Spawn object at hit point if within range
+                    float distance = gameObject.transform.position.magnitude - hit.point.magnitude;
+                    if (distance < itemToPlace.placeRange.magnitude)
+                    {
+                        SpawnObject(hit.point);
+                    }
+
+                }
             }
         }
     }

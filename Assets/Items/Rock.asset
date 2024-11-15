@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: 266e639e72d7f4c03aad0c2590d6c799, type: 3}
   type: 1
+  prefabObject: {fileID: 2666501293008209508, guid: 464c4791d9dab064284ffca72fa2fb13, type: 3}
   placeRange: {x: 3, y: 3, z: 3}
-  stackable: 1
+  stackCount: 16
