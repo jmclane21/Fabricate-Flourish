@@ -4,23 +4,37 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    public Item itemToPlace;
-    public Camera mainCamera;          // Reference to the main camera
+    const KeyCode PLACE_BLOCK = KeyCode.Mouse1;
+    const KeyCode DESTROY_BLOCK = KeyCode.Mouse0;
+    const KeyCode EXIT = KeyCode.Tab;
+    const KeyCode TRANSFORM_BLOCK = KeyCode.LeftShift;
 
-    // Method to spawn objects
-    public void SpawnObject(Vector3 spawnPosition)
-    {
-        itemToPlace = InventoryManager.Instance.getSelectedItem(true);
-        GameObject spawnedRock = Instantiate(itemToPlace.prefabObject, spawnPosition, Quaternion.identity);
+    enum buildMode{
+        PREVIEW,
+        NONE,
+        TRANSFORM
     }
 
-    // Method to handle raycast and object spawning
-    public void HandleSpawnOnClick()
+    buildMode mode = buildMode.NONE;
+
+    [HideInInspector] public Item itemToPlace;
+    [HideInInspector] GameObject previewObject;
+    public Camera mainCamera;
+
+    // Method to spawn objects
+    void SpawnObject(Vector3 spawnPosition)
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        itemToPlace = InventoryManager.Instance.getSelectedItem(true);
+        GameObject spawnedItem = Instantiate(itemToPlace.prefabObject, spawnPosition, Quaternion.identity);
+    }
+
+    void EnterPreviewMode()
+    {
+        if (Input.GetKeyDown(PLACE_BLOCK))
         {
             if (InventoryManager.Instance.selectedSlot >= 0)
             {
+                mode = buildMode.PREVIEW;
                 itemToPlace = InventoryManager.Instance.getSelectedItem(false);
                 Vector3 mousePosition = Input.mousePosition;
                 Ray ray = mainCamera.ScreenPointToRay(mousePosition);
@@ -32,7 +46,7 @@ public class BuildManager : MonoBehaviour
                     float distance = gameObject.transform.position.magnitude - hit.point.magnitude;
                     if (distance < itemToPlace.placeRange.magnitude)
                     {
-                        SpawnObject(hit.point);
+                        PreviewObject(hit.point);
                     }
 
                 }
@@ -40,11 +54,93 @@ public class BuildManager : MonoBehaviour
         }
     }
 
+    void ExitPreviewMode()
+    {
+        if (Input.GetKeyDown(EXIT)){
+            itemToPlace = null;
+            Destroy(previewObject);
+            previewObject = null;
+            mode = buildMode.NONE;
+        }
+
+    }
+
+    void PreviewObject(Vector3 spawnPosition)
+    {
+        //grabs obj without taking from inventory
+        itemToPlace = InventoryManager.Instance.getSelectedItem(false);
+
+        previewObject = Instantiate(
+            itemToPlace.prefabObject,
+            spawnPosition, Quaternion.identity,
+            //currently preview obj does not snap to ground/surfaces
+            mainCamera.transform);
+    }
+
+    void BuildObject()
+    {
+        if (Input.GetKeyDown(PLACE_BLOCK))
+        {
+            if (InventoryManager.Instance.selectedSlot >= 0)
+            {
+                //removes obj from inventory when Actually placed
+                InventoryManager.Instance.getSelectedItem(true);
+
+                //decouples preview obj from player, places fully in scene
+                previewObject.transform.parent = null;
+                previewObject = null;
+                mode = buildMode.NONE;
+            }
+        }
+    }
+
+    void EnterTransformMode()
+    {
+        if (Input.GetKeyDown(TRANSFORM_BLOCK))
+        {
+            Debug.Log("entering transform mode");
+            //should have some sort of UI indication to player
+            mode = buildMode.TRANSFORM;
+        }
+    }
+
+    void ExitTransformMode()
+    {
+        if (Input.GetKeyDown(TRANSFORM_BLOCK))
+        {
+            Debug.Log("exiting transform mode");
+            mode = buildMode.PREVIEW;
+        }
+    }
+
+    void TransformObject()
+    {
+        //lock camera
+        //take mouse input
+        //take scroll wheel input
+        //have some sort of "reset to default" key
+    }
+
     void Update()
     {
         // Handle entering preview mode
-        HandleSpawnOnClick();
+        switch (mode)
+        {
+            case buildMode.NONE:
+                EnterPreviewMode();
+                return;
 
+            case buildMode.PREVIEW:
+                ExitPreviewMode();
+                EnterTransformMode();
+                BuildObject();
+                return;
+            case buildMode.TRANSFORM:
+                ExitTransformMode();
+                TransformObject();
+                return;
+        }
+        
         // Handle exit preview, scaling, and rotation
     }
 }

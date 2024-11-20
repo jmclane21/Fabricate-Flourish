@@ -1,3 +1,6 @@
+//https://www.youtube.com/watch?v=oJAE6CbsQQA
+//Credit to Coco Code for inventory system tutorial
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
