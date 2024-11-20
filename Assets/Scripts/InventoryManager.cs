@@ -13,7 +13,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
-        if(Instance != null)
+        if (Instance != null)
         {
             Destroy(gameObject);
             return;
@@ -34,12 +34,13 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.inputString != null)
+        // Handle number key input for selecting inventory slots
+        if (Input.inputString != null)
         {
             bool isNumber = int.TryParse(Input.inputString, out int num);
             if (isNumber)
             {
-                if(num != 0)
+                if (num != 0)
                 {
                     selectSlot(num - 1);
                 }
@@ -61,8 +62,10 @@ public class InventoryManager : MonoBehaviour
             {
                 SpawnNewItem(item, slot);
                 return true;
-            } else if(itemInSlot != null && itemInSlot.item == item &&
-                itemInSlot.count < itemInSlot.item.stackCount){
+            }
+            else if (itemInSlot != null && itemInSlot.item == item &&
+                     itemInSlot.count < itemInSlot.item.stackCount)
+            {
                 itemInSlot.count++;
                 itemInSlot.RefreshCount();
                 return true;
@@ -78,15 +81,15 @@ public class InventoryManager : MonoBehaviour
         inventoryItem.InitialiseItem(item);
     }
 
-    //missing usable item toggle
-    //eg: tool item vs block item
+    // Gets the selected item and optionally uses it
     public Item getSelectedItem(bool use)
     {
         InventorySlot slot = inventorySlots[selectedSlot];
         InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
         if (itemInSlot != null)
         {
-            if (use) { 
+            if (use)
+            {
                 itemInSlot.count--;
                 if (itemInSlot.count <= 0)
                 {
