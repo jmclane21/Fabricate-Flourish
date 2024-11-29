@@ -20,6 +20,7 @@ public class BuildManager : MonoBehaviour
 
     [HideInInspector] public Item itemToPlace;
     [HideInInspector] GameObject previewObject;
+    public Material previewMaterial;
     public Camera mainCamera;
 
     public float gridSize = 1f; // Size of the snapping grid
@@ -66,6 +67,19 @@ public class BuildManager : MonoBehaviour
         }
     }
 
+    void setPreviewObjectTransparent()
+    {
+        Renderer renderer;
+        renderer = previewObject.GetComponent<Renderer>();
+
+        Material[] materials = new Material[renderer.materials.Length];
+        for (int i = 0; i < materials.Length; i++)
+        {
+            materials[i] = previewMaterial;
+        }
+        renderer.materials = materials;
+    }
+
     void PreviewObject(Vector3 spawnPosition, Vector3 surfaceNormal)
     {
         itemToPlace = InventoryManager.Instance.getSelectedItem(false);
@@ -74,20 +88,9 @@ public class BuildManager : MonoBehaviour
         {
             previewObject = Instantiate(itemToPlace.prefabObject, spawnPosition, Quaternion.identity, mainCamera.transform);
         }
-
-
-        // Fix Rigidbody and MeshCollider issues
-        // Rigidbody rb = previewObject.GetComponent<Rigidbody>();
-        // if (rb != null)
-        // {
-        //     rb.isKinematic = true; // Make Rigidbody kinematic
-        // }
-
-        // MeshCollider meshCollider = previewObject.GetComponent<MeshCollider>();
-        // if (meshCollider != null && !meshCollider.convex)
-        // {
-        //     meshCollider.convex = true; // Enable convex if needed
-        // }
+        previewObject.GetComponent<BoxCollider>().enabled = false;
+        setPreviewObjectTransparent();
+        
 
         // Snap the preview object to the grid or surface
         Vector3 snappedPosition = GetSnappedPosition(spawnPosition, surfaceNormal);
@@ -108,6 +111,7 @@ public class BuildManager : MonoBehaviour
                 InventoryManager.Instance.getSelectedItem(true);
 
                 GameObject placedObject = Instantiate(itemToPlace.prefabObject, previewObject.transform.position, previewObject.transform.rotation);
+                placedObject.transform.localScale = previewObject.transform.localScale;
                 Destroy(previewObject);
                 previewObject = null;
                 mode = buildMode.NONE;
@@ -158,21 +162,23 @@ void TransformObject()
     // Check for the 'R' key to rotate the log upright
     if (Input.GetKeyDown(KeyCode.R))
     {
-        // Make the log stand upright (rotating to 90 degrees around the X-axis)
+        // Make the log stand upright (rotating to 90 degrees around the x-axis)
         previewObject.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
         Debug.Log("Log rotated to stand upright.");
     }
 
-    // Optional: Rotate object with right-click drag
-    float rotationSpeed = 100f; // Adjust for sensitivity
-    if (Input.GetMouseButton(1)) // Right-click and drag to rotate
+    // rotate object with q/e around z axis
+    if (Input.GetKeyDown(KeyCode.Q)) // Right-click and drag to rotate
     {
-        float mouseX = Input.GetAxis("Mouse X");
-        previewObject.transform.Rotate(Vector3.up, mouseX * rotationSpeed * Time.deltaTime, Space.World);
+        previewObject.transform.Rotate(new Vector3(0, 0, rotationStep));
+    }
+    if (Input.GetKeyDown(KeyCode.E)) // Right-click and drag to rotate
+    {
+        previewObject.transform.Rotate(new Vector3(0, 0, -rotationStep));
     }
 
-    // Optional: Scale object with scroll wheel
-    float scaleSpeed = 0.1f; // Adjust for sensitivity
+        // Optional: Scale object with scroll wheel
+        float scaleSpeed = 0.1f; // Adjust for sensitivity
     float scroll = Input.GetAxis("Mouse ScrollWheel");
     if (scroll != 0f)
     {
