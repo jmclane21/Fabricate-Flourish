@@ -177,8 +177,8 @@ void TransformObject()
         previewObject.transform.Rotate(new Vector3(0, 0, -rotationStep));
     }
 
-        // Optional: Scale object with scroll wheel
-        float scaleSpeed = 0.1f; // Adjust for sensitivity
+    // Optional: Scale object with scroll wheel
+    float scaleSpeed = 0.1f; // Adjust for sensitivity
     float scroll = Input.GetAxis("Mouse ScrollWheel");
     if (scroll != 0f)
     {
