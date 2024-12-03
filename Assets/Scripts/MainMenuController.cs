@@ -16,19 +16,19 @@ public class MainMenuManager : MonoBehaviour
 
     public void OpenOptions()
     {
-            mainMenuPanel.SetActive(false); // Disable Main Menu
+        mainMenuPanel.SetActive(false); // Disable Main Menu
 
         // Add functionality for options, like opening an options menu or panel
-    optionsPanel.SetActive(true);
+        optionsPanel.SetActive(true);
 
     }
 
     public void CloseOptions()
-{
-    optionsPanel.SetActive(false);
+    {
+        optionsPanel.SetActive(false);
         mainMenuPanel.SetActive(true); // Enable Main Menu
 
-}
+    }
 
     public void ShowCredits()
     {
@@ -38,10 +38,8 @@ public class MainMenuManager : MonoBehaviour
     }
 
     public void CloseCredits()
-{
+    {
     creditsPanel.SetActive(false); // Hide Credits Panel
     mainMenuPanel.SetActive(true); // Show Main Menu
-}
-
-
+    }
 }
