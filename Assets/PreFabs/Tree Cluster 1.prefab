@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3102699682668083269}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Tree Cluster 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,9 +43,45 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3102699682668083269}
     m_Modifications:
+    - target: {fileID: 472722777780632851, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 928743856088189575, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1080249404416818268, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090964104974946585, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642226279901066366, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864423239636392242, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 2419995328044012093, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
       propertyPath: m_Name
       value: Birch Tree 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419995328044012093, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145273019868014746, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397424944421934082, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4245222578074831568, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
       propertyPath: m_LocalPosition.x
@@ -86,6 +122,14 @@ PrefabInstance:
     - target: {fileID: 4245222578074831568, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804365906561283095, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900484930344311578, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6014047859388776128, guid: f7e392e8f67865443b864cd0ce4df972, type: 3}
       propertyPath: m_IsTrigger
@@ -131,9 +175,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3102699682668083269}
     m_Modifications:
+    - target: {fileID: 593145437547012234, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300041188526834755, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 2662070307435329210, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219001142073542671, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861587739609837321, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329346540444440031, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5764731850215467408, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6158981873750179541, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
       propertyPath: m_LocalPosition.x
@@ -175,9 +243,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6364719916433826394, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389756115625570442, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961396196892633089, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7918039536018358246, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
       propertyPath: m_Name
       value: Birch Tree 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918039536018358246, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119909811840422173, guid: efd49cb640cc4554e9bdcd381151fa05, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -219,6 +307,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3102699682668083269}
     m_Modifications:
+    - target: {fileID: 159473514238566004, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 429478790873555835, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1130006565999667803, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.9333456
@@ -259,13 +355,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1876757679467371736, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196253575767520042, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5703010855120914369, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750423711355982168, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6404525810338520717, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
       propertyPath: m_Name
       value: Broadleaf Tree 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6404525810338520717, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7437014896801663911, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7632650376693992578, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684269399666928499, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007235912050144189, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022079632400861317, guid: ef6b6f599b75dfc4584ff75ddc20ad3a, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -311,6 +443,34 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1428237474925737270, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982680494088398441, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718835959451722095, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774141313419496480, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889882214067856150, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4515148631399659625, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4926419932925694316, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5363887426724029827, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7528238
@@ -351,9 +511,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5611209074986588116, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646258807653114602, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7083189039419782928, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
       propertyPath: m_Name
       value: Broadleaf Tree 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083189039419782928, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7752496180139972654, guid: 13192ab6d52889641ad5c9c029d053e2, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

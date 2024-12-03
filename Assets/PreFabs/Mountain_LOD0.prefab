@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7520248356081211400}
   - component: {fileID: 9070650421502611762}
   - component: {fileID: 1822729275324658636}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Mountain_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,9 +158,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5222601456243245667, guid: 0af1d8375522ce243b6b7b579f173c7d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -974959280853297719, guid: 0af1d8375522ce243b6b7b579f173c7d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 747571532610522630, guid: 0af1d8375522ce243b6b7b579f173c7d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0af1d8375522ce243b6b7b579f173c7d, type: 3}
       propertyPath: m_Name
       value: Rock Cliff 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0af1d8375522ce243b6b7b579f173c7d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1005024199247889429, guid: 0af1d8375522ce243b6b7b579f173c7d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515292225503614792, guid: 0af1d8375522ce243b6b7b579f173c7d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 9133021070946882107, guid: 0af1d8375522ce243b6b7b579f173c7d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -310,13 +334,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8084374987890660210, guid: 3f4d1ff99b762d242b3c9286ece46e99, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6069095820123666861, guid: 3f4d1ff99b762d242b3c9286ece46e99, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -2811644860755483504, guid: 3f4d1ff99b762d242b3c9286ece46e99, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 59f7c48b23e2e3140a20d8fb0b18643b, type: 2}
+    - target: {fileID: -2546596824287846585, guid: 3f4d1ff99b762d242b3c9286ece46e99, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3f4d1ff99b762d242b3c9286ece46e99, type: 3}
       propertyPath: m_Name
       value: Rock Cliff 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3f4d1ff99b762d242b3c9286ece46e99, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733660361089176239, guid: 3f4d1ff99b762d242b3c9286ece46e99, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8692255155946124384, guid: 3f4d1ff99b762d242b3c9286ece46e99, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -462,10 +510,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8378049270257238598, guid: a76bf24149078e5429ed0bc49ba6f4a1, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -7012275514778762201, guid: a76bf24149078e5429ed0bc49ba6f4a1, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 76257405970800744, guid: a76bf24149078e5429ed0bc49ba6f4a1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 59f7c48b23e2e3140a20d8fb0b18643b, type: 2}
+    - target: {fileID: 771067451598567618, guid: a76bf24149078e5429ed0bc49ba6f4a1, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 811542363211385040, guid: a76bf24149078e5429ed0bc49ba6f4a1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -473,6 +533,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a76bf24149078e5429ed0bc49ba6f4a1, type: 3}
       propertyPath: m_Name
       value: Rock Cliff 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a76bf24149078e5429ed0bc49ba6f4a1, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157525021123066412, guid: a76bf24149078e5429ed0bc49ba6f4a1, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199283583657998996, guid: a76bf24149078e5429ed0bc49ba6f4a1, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -618,14 +690,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8126779059459294329, guid: 55448018583f0da4fa7da2eb399d1052, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 632337201475494250, guid: 55448018583f0da4fa7da2eb399d1052, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 55448018583f0da4fa7da2eb399d1052, type: 3}
       propertyPath: m_Name
       value: Rock Cliff 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55448018583f0da4fa7da2eb399d1052, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2053563171077850884, guid: 55448018583f0da4fa7da2eb399d1052, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 59f7c48b23e2e3140a20d8fb0b18643b, type: 2}
+    - target: {fileID: 3807212565489152485, guid: 55448018583f0da4fa7da2eb399d1052, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3927969224318753496, guid: 55448018583f0da4fa7da2eb399d1052, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695106743239464528, guid: 55448018583f0da4fa7da2eb399d1052, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

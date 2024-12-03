@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8558788554069548475}
   - component: {fileID: 1599531614037083822}
   - component: {fileID: 7995937425747545457}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Standard Rock 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 7691461703865338203}
   - component: {fileID: 4819010251766835325}
   - component: {fileID: 1164514350707941765}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Standard Rock 2_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 9059044199768709115}
   - component: {fileID: 4036788054676360472}
   - component: {fileID: 3063791123323030091}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Standard Rock 2_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 2005221895103581841}
   - component: {fileID: 6412673214450145886}
   - component: {fileID: 1476046440525288517}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Standard Rock 2_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 8209753058256952831}
   - component: {fileID: 1536070994766706941}
   - component: {fileID: 5550672446826783035}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Standard Rock 2_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
