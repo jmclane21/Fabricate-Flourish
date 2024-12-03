@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0fe3a1a4f2d8c54cb53b816c0f64d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 200
-  wanderTimer: 3000
+  wanderRadius: 100
+  wanderTimer: 5
   totalWanderDuration: 3000
   obstacleMask:
     serializedVersion: 2
@@ -157,7 +157,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.63
-  m_Speed: 3.5
+  m_Speed: 2.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
