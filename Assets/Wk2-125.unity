@@ -3094,6 +3094,7 @@ Transform:
   - {fileID: 779566156}
   - {fileID: 308188042}
   - {fileID: 596680362}
+  - {fileID: 1913443985}
   - {fileID: 589637248}
   - {fileID: 292757232}
   m_Father: {fileID: 0}
@@ -10942,6 +10943,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6027514613136385847, guid: e1f58716e9dd50348a2e2734fbbcb2cf, type: 3}
   m_PrefabInstance: {fileID: 1475444399}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1913443984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1913443985}
+  - component: {fileID: 1913443986}
+  m_Layer: 0
+  m_Name: Animal Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1913443985
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913443984}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 501573042}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1913443986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913443984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed5355bbaf082d4291bb34854f68234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foliagePrefabs:
+  - {fileID: 1287295899898638, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 3}
+  - {fileID: 1055064919166404, guid: de6abd774f85e18408346a3233418242, type: 3}
+  - {fileID: 1206511787925574, guid: 3b1e3e9155d404942bc65d9aa80120ba, type: 3}
+  - {fileID: 1965851562501010, guid: e82139b3bae6212439ea1e85ad29678b, type: 3}
+  spawnRadius: 10
+  maxAttempts: 10
 --- !u!1001 &1915586876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11422,6 +11474,7 @@ GameObject:
   - component: {fileID: 1947773137}
   - component: {fileID: 1947773138}
   - component: {fileID: 1947773139}
+  - component: {fileID: 1947773140}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -11566,6 +11619,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foliageManager: {fileID: 596680363}
+--- !u!114 &1947773140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947773128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f970acd6925dc418ea65616936a153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foliageManager: {fileID: 1913443986}
 --- !u!4 &1948209699 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1656120504373849764, guid: 202b324524862254f848e1bcfa8df895, type: 3}
