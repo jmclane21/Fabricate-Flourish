@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd12b47bba40542e9b413a6cb6d1077d, type: 3}
   m_Name: Log
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: ef0857c761f4e48c3b833bad79770e6d, type: 3}
+  image: {fileID: 21300000, guid: 6532328332dc0497b821c7491da5102e, type: 3}
   type: 0
   prefabObject: {fileID: 8295684517260587765, guid: 7d0ec9a08317141e798776d8c945ad4c, type: 3}
   placeRange: {x: 3, y: 3, z: 3}

@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 1052654068472834191}
   - component: {fileID: 3748345524788580631}
   - component: {fileID: 8972246272835795069}
+  - component: {fileID: 2465277670632817220}
   m_Layer: 0
   m_Name: Standard Rock 4
   m_TagString: Untagged
@@ -256,6 +257,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8099999722072016450, guid: 75ed99bf730d4404d9eec151c5d709ba, type: 3}
+--- !u!114 &2465277670632817220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3663980519387192599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d0f978f263e004bb68ff8f5fd1572b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 7e48a9a0b7bf64b20a41a7b631217e36, type: 2}
+  isCollected: 0
 --- !u!1 &4882048612314819626
 GameObject:
   m_ObjectHideFlags: 0
