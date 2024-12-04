@@ -87,6 +87,10 @@ public class InventoryManager : MonoBehaviour
     // Gets the selected item and optionally uses it
     public Item getSelectedItem(bool use)
     {
+        if(selectedSlot == -1)
+        {
+            return null;
+        }
         InventorySlot slot = inventorySlots[selectedSlot];
         InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
         if (itemInSlot != null)

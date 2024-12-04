@@ -38,18 +38,21 @@ public class BuildManager : MonoBehaviour
         {
             if (InventoryManager.Instance.selectedSlot >= 0)
             {
-                mode = buildMode.PREVIEW;
                 itemToPlace = InventoryManager.Instance.getSelectedItem(false);
-                Vector3 mousePosition = Input.mousePosition;
-                Ray ray = mainCamera.ScreenPointToRay(mousePosition);
-                RaycastHit hit;
+                if (itemToPlace) {
+                    mode = buildMode.PREVIEW;
+                    Vector3 mousePosition = Input.mousePosition;
+                    Ray ray = mainCamera.ScreenPointToRay(mousePosition);
+                    RaycastHit hit;
 
-                if (Physics.Raycast(ray, out hit))
-                {
-                    float distance = gameObject.transform.position.magnitude - hit.point.magnitude;
-                    if (distance < itemToPlace.placeRange.magnitude)
+                    if (Physics.Raycast(ray, out hit))
                     {
-                        PreviewObject(hit.point, hit.normal);
+                        float distance = gameObject.transform.position.magnitude - hit.point.magnitude;
+                        Debug.Log(itemToPlace.placeRange.magnitude);
+                        if (distance < itemToPlace.placeRange.magnitude)
+                        {
+                            PreviewObject(hit.point, hit.normal);
+                        }
                     }
                 }
             }
